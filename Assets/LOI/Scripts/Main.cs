@@ -16,6 +16,7 @@ public class Main : MonoBehaviour
     public Material RenderQuadMaterial;
     public GameObject ItemsContainer;
     public GameObject BuildMenu;
+    public GameObject FarmMenu;
     public NoxTokenContractHandler noxTokenHandler;
     public ProfileHandler profile;
     private Dictionary<int, BaseItemScript> _itemInstances;
@@ -103,5 +104,15 @@ public class Main : MonoBehaviour
     public void ReloadScene()
     {
         LoadScene();
+    }
+
+    public void openFarm()
+    {
+        FarmMenu.SetActive(true);
+    }
+
+    public void closeFarm()
+    {
+        FarmMenu.SetActive(false);
     }
 }
